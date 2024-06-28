@@ -169,3 +169,18 @@ img {
     }
   }
 }
+
+/* About */
+
+.about {
+  & .container {
+    padding-block: 1rem 2rem;
+    display: flex;
+  }
+
+  @media only screen and (max-width: 600px) {
+    & .container {
+      flex-direction: column;
+    }
+  }
+}
