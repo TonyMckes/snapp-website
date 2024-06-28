@@ -186,6 +186,7 @@ img {
 }
 
 /* Delivery */
+
 .delivery {
   & .container {
     padding-block: 2rem;
@@ -203,6 +204,41 @@ img {
   @media only screen and (max-width: 600px) {
     & .container {
       flex-direction: column;
+    }
+  }
+}
+
+/* Footer */
+
+footer {
+  & .container {
+    border-top: 1px solid rgba(var(--text-color), 0.75);
+    padding-block: 2rem;
+
+    & nav ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    & ul {
+      display: flex;
+
+      gap: 1rem;
+      justify-content: center;
+      list-style-type: none;
+      margin-top: 2rem;
+
+      & img {
+        width: 1.25rem;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      & nav ul {
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
     }
   }
 }
