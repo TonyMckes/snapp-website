@@ -3,3 +3,60 @@
   --text-color: #404040;
   --thumbnail-color: #b4c7b4;
 }
+
+body {
+  margin: 0;
+  color: var(--text-color);
+
+  & a {
+    color: var(--text-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* Utilities */
+
+.container {
+  max-width: 1024px;
+  margin-inline: auto;
+
+  @media only screen and (max-width: 600px) {
+    & {
+      padding: 0 1rem;
+    }
+  }
+}
+
+/* Navigation */
+
+.navbar {
+  top: 0;
+  position: sticky;
+  background-color: white;
+  box-shadow: 2px 1px 25px #40404046;
+
+  & .container {
+    display: flex;
+    align-items: center;
+
+    & > a:first-child {
+      color: var(--primary-color);
+      font-size: large;
+      font-weight: bolder;
+    }
+  }
+
+  & nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+}
