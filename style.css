@@ -1,6 +1,7 @@
 * {
   --primary-color: #51ab59;
   --text-color: #404040;
+  --border-color: 64, 64, 64;
   --thumbnail-color: #b4c7b4;
 }
 
@@ -46,7 +47,6 @@ h2 {
   margin-inline: auto;
 
   @media only screen and (max-width: 768px) {
-
   }
   @media only screen and (max-width: 1024px) {
     & {
@@ -67,10 +67,10 @@ h2 {
     color: white;
   }
   &.secondary {
-    border: 2px solid rgba(var(--text-color), 0.75);
+    border: 2px solid rgba(var(--border-color), 0.25);
   }
   &.featured {
-    box-shadow: 2px 1px 25px #40404046;
+    box-shadow: 2px 1px 25px rgba(var(--border-color), 0.25);
   }
 }
 
@@ -80,12 +80,13 @@ h2 {
   top: 0;
   position: sticky;
   background-color: white;
-  box-shadow: 2px 1px 25px #40404046;
+  box-shadow: 2px 1px 25px rgba(var(--border-color), 0.25);
   padding-block: 1rem;
 
   & .container {
     display: flex;
     align-items: center;
+    gap: 4rem;
 
     & > a:first-child {
       color: var(--primary-color);
@@ -98,8 +99,16 @@ h2 {
   }
 
   & nav ul {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
     list-style-type: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    & nav ul {
+      display: none;
+    }
   }
 }
 
@@ -109,8 +118,9 @@ h2 {
   & .container {
     display: flex;
     flex-direction: row;
-    gap: 4rem;
-    padding-block: 3rem;
+    align-items: center;
+    gap: 6rem;
+    padding-block: 6rem;
   }
 
   & header {
@@ -135,22 +145,35 @@ h2 {
 
   & .container {
     display: flex;
+    align-items: center;
     flex-direction: row;
     gap: 4rem;
     padding-block: 3rem;
   }
 
   & header {
+    flex: 1 1 100%;
+
     & ul {
       list-style-type: none;
       margin-top: 3rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 3rem;
+
+      & li a {
+        text-align: center;
+        display: block;
+        white-space: nowrap;
+        background: white;
+      }
     }
 
     & > a {
-      margin-top: 1rem;
+      display: block;
+      max-width: max-content;
+      margin-top: 3rem;
+      margin-inline: auto;
       font-weight: medium;
     }
   }
@@ -172,7 +195,7 @@ h2 {
   }
 
   & ul {
-    margin-top: 2rem;
+    margin-top: 3rem;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -184,10 +207,12 @@ h2 {
       flex-direction: column;
       gap: 0.35rem 0;
       text-align: center;
-      max-width: min-content;
+      /* max-width: min-content; */
     }
+
     & img {
-      width: 1.75rem;
+      width: 4.5rem;
+      margin-inline: auto;
     }
   }
 }
@@ -198,6 +223,12 @@ h2 {
   & .container {
     padding-block: 1rem 2rem;
     display: flex;
+    align-items: center;
+    gap: 0 10rem;
+  }
+
+  & header {
+    flex: 1 1 100%;
   }
 
   @media only screen and (max-width: 768px) {
@@ -213,7 +244,12 @@ h2 {
   & .container {
     padding-block: 2rem;
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  & header {
+    flex: 1 1 100%;
   }
 
   & a {
@@ -236,11 +272,13 @@ footer {
   & .container {
     border-top: 1px solid rgba(var(--text-color), 0.75);
     padding-block: 2rem;
+    display: flex;
+    justify-content: space-between;
 
     & nav ul {
       display: flex;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     & ul {
