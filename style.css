@@ -140,3 +140,32 @@ img {
     }
   }
 }
+
+/* Categories */
+
+.categories {
+  & .container {
+    padding-block: 1.5rem;
+  }
+
+  & ul {
+    margin-top: 2rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 0.6rem;
+
+    & li {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem 0;
+      text-align: center;
+      max-width: min-content;
+    }
+    & img {
+      width: 1.75rem;
+    }
+  }
+}
