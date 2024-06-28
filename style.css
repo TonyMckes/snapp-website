@@ -184,3 +184,25 @@ img {
     }
   }
 }
+
+/* Delivery */
+.delivery {
+  & .container {
+    padding-block: 2rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  & a {
+    margin-top: 2rem;
+    display: block;
+    max-width: max-content;
+    margin-inline: auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    & .container {
+      flex-direction: column;
+    }
+  }
+}
