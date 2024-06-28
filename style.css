@@ -109,3 +109,34 @@ img {
   }
 }
 
+/* Apps */
+
+.app {
+  background: #f9f9f9;
+
+  & .container {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding-block: 3rem;
+  }
+
+  & header ul {
+    list-style-type: none;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  & header > a {
+    margin-top: 1rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+
+    & .container {
+      flex-direction: column;
+    }
+  }
+}
