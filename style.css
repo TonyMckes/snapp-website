@@ -60,7 +60,7 @@ section:not(:first-child) > .container {
   border-radius: 1rem;
   padding: 1rem 2.5rem;
   display: inline-block;
-  font-weight: medium;
+  font-weight: 500;
   @media only screen and (min-width: 1024px) {
     font-size: 1.25rem;
   }
@@ -228,47 +228,46 @@ section:not(:first-child) > .container {
 
 .app {
   background: #f9f9f9;
+  text-align: center;
 
   & .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row;
-    gap: 4rem;
     padding-block: 3rem;
-  }
 
-  & header {
-    flex: 1 1 100%;
+    & header {
+      & ul {
+        list-style-type: none;
+        margin-top: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
 
-    & ul {
-      list-style-type: none;
-      margin-top: 3rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+        & li a {
+          text-align: center;
+          display: block;
+          white-space: nowrap;
+          background: white;
+        }
+      }
 
-      & li a {
-        text-align: center;
+      & > a {
         display: block;
-        white-space: nowrap;
-        background: white;
+        max-width: max-content;
+        margin-top: 3rem;
+        margin-inline: auto;
+        font-weight: 500;
       }
     }
 
-    & > a {
-      display: block;
-      max-width: max-content;
-      margin-top: 3rem;
-      margin-inline: auto;
-      font-weight: medium;
-    }
-  }
+    @media only screen and (min-width: 1024px) {
+      flex-direction: row;
+      gap: 4rem;
 
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-
-    & .container {
-      flex-direction: column;
+      & header {
+        flex: 1 1 100%;
+      }
     }
   }
 }
