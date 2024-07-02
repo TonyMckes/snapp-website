@@ -274,10 +274,9 @@ section:not(:first-child) > .container {
 
 /* Categories */
 
-.categories {
-  & .container {
-    padding-block: 1.5rem;
-  }
+.categories .container {
+  padding-block: 1.5rem;
+  margin-top: 2rem !important;
 
   & ul {
     margin-top: 3rem;
@@ -292,7 +291,6 @@ section:not(:first-child) > .container {
       flex-direction: column;
       gap: 0.35rem 0;
       text-align: center;
-      /* max-width: min-content; */
     }
 
     & img {
