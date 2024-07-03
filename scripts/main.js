@@ -21,6 +21,7 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     setCategoriesLang(heLang);
     setAboutLang(heLang);
     setDeliveryLang(heLang);
+    setFooterLang(heLang);
   } else {
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.setAttribute("dir", "ltr");
@@ -31,6 +32,7 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     setCategoriesLang(enLang);
     setAboutLang(enLang);
     setDeliveryLang(enLang);
+    setFooterLang(enLang);
   }
 });
 
@@ -143,4 +145,41 @@ function setDeliveryLang(lang) {
   paragraph.textContent = lang.delivery.paragraph;
   anchor.setAttribute("href", lang.delivery.cta.href);
   anchor.textContent = lang.delivery.cta.title;
+}
+
+function setFooterLang(lang) {
+  const footerContainer = document.querySelector("footer .container");
+  const navList = footerContainer.querySelector("nav ul");
+  const list = footerContainer.querySelector(":scope > ul");
+
+  const navItems = lang.footer.cta.map(({ title, href }) => {
+    const listItemElement = document.createElement("li");
+    const anchorElement = document.createElement("a");
+
+    anchorElement.setAttribute("href", href);
+    anchorElement.textContent = title;
+
+    listItemElement.appendChild(anchorElement);
+
+    return listItemElement;
+  });
+
+  const socialLinks = lang.footer.socials.map(({ title, icon, href }) => {
+    const listItemElement = document.createElement("li");
+    const anchorElement = document.createElement("a");
+    const imgElement = document.createElement("img");
+
+    imgElement.setAttribute("src", icon);
+    imgElement.setAttribute("alt", title);
+
+    anchorElement.setAttribute("href", href);
+    anchorElement.appendChild(imgElement);
+
+    listItemElement.appendChild(anchorElement);
+
+    return listItemElement;
+  });
+
+  navList.replaceChildren(...navItems);
+  list.replaceChildren(...socialLinks);
 }
