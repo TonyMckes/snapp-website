@@ -302,21 +302,20 @@ section:not(:first-child) > .container {
 
 /* About */
 
-.about {
-  & .container {
-    padding-block: 1rem 2rem;
+.about .container {
+  flex-direction: column-reverse;
+
+  @media only screen and (min-width: 768px) {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 0 10rem;
-  }
+    gap: 2rem;
 
-  & header {
-    flex: 1 1 100%;
-  }
-
-  @media only screen and (max-width: 768px) {
-    & .container {
-      flex-direction: column;
+    & header {
+      flex: 1 1 50%;
+    }
+    & .image {
+      flex: 1 1 50%;
     }
   }
 }
