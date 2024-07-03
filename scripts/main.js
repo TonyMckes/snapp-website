@@ -51,34 +51,37 @@ function setNavLang(lang) {
 function setLandingLang(lang) {
   const ladingHeader = document.querySelector(".landing header");
 
-  const heading = document.createElement("h1");
-  const paragraph = document.createElement("p");
-  const nav = document.createElement("nav");
+  const heading = ladingHeader.querySelector("h1");
+  const paragraph = ladingHeader.querySelector("p");
+  const nav = ladingHeader.querySelector("nav");
 
   heading.textContent = lang.landing.heading;
   paragraph.textContent = lang.landing.paragraph;
 
-  lang.landing.cta.forEach((label) => {
+  const anchorElements = lang.landing.cta.map((label) => {
     const anchorElement = document.createElement("a");
+
     anchorElement.setAttribute("href", "#");
     anchorElement.classList.add("cta");
     anchorElement.textContent = label;
 
-    nav.appendChild(anchorElement);
+    return anchorElement;
   });
 
-  ladingHeader.replaceChildren(heading, paragraph, nav);
+  nav.replaceChildren(...anchorElements);
 }
 
 function setAppsLang(lang) {
   const appsHeader = document.querySelector(".app header");
 
-  const heading = document.createElement("h2");
-  const list = document.createElement("ul");
+  const heading = appsHeader.querySelector("h2");
+  const list = appsHeader.querySelector("ul");
+  const anchor = appsHeader.querySelector("a");
 
   heading.textContent = lang.landing.heading;
+  anchor.textContent = lang.app.cta.title;
 
-  lang.app.apps.forEach(({ title, icon, href }) => {
+  const listItems = lang.app.apps.map(({ title, icon, href }) => {
     const listItemElement = document.createElement("li");
     const anchorElement = document.createElement("a");
     const imgElement = document.createElement("img");
@@ -91,15 +94,11 @@ function setAppsLang(lang) {
     anchorElement.append(imgElement, title);
 
     listItemElement.appendChild(anchorElement);
-    list.appendChild(listItemElement);
+
+    return listItemElement;
   });
 
-  const anchorElement = document.createElement("a");
-  anchorElement.setAttribute("href", lang.app.cta.href);
-  anchorElement.classList.add("cta", "primary");
-  anchorElement.textContent = lang.app.cta.title;
-
-  appsHeader.replaceChildren(heading, list, anchorElement);
+  list.replaceChildren(...listItems);
 }
 
 function setCategoriesLang(lang) {
