@@ -19,6 +19,7 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     setLandingLang(heLang);
     setAppsLang(heLang);
     setCategoriesLang(heLang);
+    setAboutLang(heLang);
   } else {
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.setAttribute("dir", "ltr");
@@ -27,6 +28,7 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     setLandingLang(enLang);
     setAppsLang(enLang);
     setCategoriesLang(enLang);
+    setAboutLang(enLang);
   }
 });
 
@@ -117,4 +119,14 @@ function setCategoriesLang(lang) {
   });
 
   list.replaceChildren(...listItems);
+}
+
+function setAboutLang(lang) {
+  const aboutHeader = document.querySelector(".about header");
+
+  const heading = aboutHeader.querySelector("h2");
+  const paragraph = aboutHeader.querySelector("p");
+
+  heading.textContent = lang.about.heading;
+  paragraph.textContent = lang.about.paragraph;
 }
