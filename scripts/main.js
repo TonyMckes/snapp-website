@@ -18,6 +18,7 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     setNavLang(heLang);
     setLandingLang(heLang);
     setAppsLang(heLang);
+    setCategoriesLang(heLang);
   } else {
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.setAttribute("dir", "ltr");
@@ -25,6 +26,7 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     setNavLang(enLang);
     setLandingLang(enLang);
     setAppsLang(enLang);
+    setCategoriesLang(enLang);
   }
 });
 
@@ -94,4 +96,25 @@ function setAppsLang(lang) {
   anchorElement.textContent = lang.app.cta.title;
 
   appsHeader.replaceChildren(heading, list, anchorElement);
+}
+
+function setCategoriesLang(lang) {
+  const categoriesContainer = document.querySelector(".categories .container");
+
+  const heading = categoriesContainer.querySelector("h2");
+  const list = categoriesContainer.querySelector("ul");
+
+  heading.textContent = lang.categories.heading;
+
+  const listItems = lang.categories.cta.map(({ icon, title }) => {
+    const listElement = document.createElement("li");
+    const imgElement = document.createElement("img");
+
+    imgElement.setAttribute("src", icon);
+    listElement.append(imgElement, title);
+
+    return listElement;
+  });
+
+  list.replaceChildren(...listItems);
 }

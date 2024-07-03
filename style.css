@@ -306,21 +306,19 @@ section:not(:first-child) > .container {
   & ul {
     margin-top: 3rem;
     list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     gap: 1.25rem;
 
     & li {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem 0;
       text-align: center;
+      text-wrap: nowrap;
     }
 
     & img {
       width: 4.5rem;
       margin-inline: auto;
+      margin-bottom: 0.35rem;
     }
   }
 }
