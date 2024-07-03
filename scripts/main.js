@@ -16,11 +16,13 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     document.documentElement.setAttribute("dir", "rtl");
 
     setNavLang(heLang);
+    setLandingLang(heLang);
   } else {
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.setAttribute("dir", "ltr");
 
     setNavLang(enLang);
+    setLandingLang(enLang);
   }
 });
 
@@ -36,4 +38,26 @@ function setNavLang(lang) {
     return listElement;
   });
   document.querySelector(".navbar #menu").replaceChildren(...navigationItems);
+}
+
+function setLandingLang(lang) {
+  const ladingHeader = document.querySelector(".landing header");
+
+  const heading = document.createElement("h1");
+  const paragraph = document.createElement("p");
+  const nav = document.createElement("nav");
+
+  heading.textContent = lang.landing.heading;
+  paragraph.textContent = lang.landing.paragraph;
+
+  lang.landing.cta.forEach((label) => {
+    const anchorElement = document.createElement("a");
+    anchorElement.setAttribute("href", "#");
+    anchorElement.classList.add("cta");
+    anchorElement.textContent = label;
+
+    nav.appendChild(anchorElement);
+  });
+
+  ladingHeader.replaceChildren(heading, paragraph, nav);
 }
