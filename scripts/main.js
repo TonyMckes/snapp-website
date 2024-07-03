@@ -17,12 +17,14 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
 
     setNavLang(heLang);
     setLandingLang(heLang);
+    setAppsLang(heLang);
   } else {
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.setAttribute("dir", "ltr");
 
     setNavLang(enLang);
     setLandingLang(enLang);
+    setAppsLang(enLang);
   }
 });
 
@@ -60,4 +62,36 @@ function setLandingLang(lang) {
   });
 
   ladingHeader.replaceChildren(heading, paragraph, nav);
+}
+
+function setAppsLang(lang) {
+  const appsHeader = document.querySelector(".app header");
+
+  const heading = document.createElement("h2");
+  const list = document.createElement("ul");
+
+  heading.textContent = lang.landing.heading;
+
+  lang.app.apps.forEach(({ title, icon, href }) => {
+    const listItemElement = document.createElement("li");
+    const anchorElement = document.createElement("a");
+    const imgElement = document.createElement("img");
+
+    imgElement.setAttribute("src", icon);
+
+    anchorElement.setAttribute("href", href);
+    anchorElement.setAttribute("dir", "auto");
+    anchorElement.classList.add("cta", "featured");
+    anchorElement.append(imgElement, title);
+
+    listItemElement.appendChild(anchorElement);
+    list.appendChild(listItemElement);
+  });
+
+  const anchorElement = document.createElement("a");
+  anchorElement.setAttribute("href", lang.app.cta.href);
+  anchorElement.classList.add("cta", "primary");
+  anchorElement.textContent = lang.app.cta.title;
+
+  appsHeader.replaceChildren(heading, list, anchorElement);
 }

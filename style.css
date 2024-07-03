@@ -77,7 +77,11 @@ section:not(:first-child) > .container {
   }
   &.featured {
     color: inherit;
+    background: white;
     box-shadow: 2px 1px 25px rgba(var(--border-color), 0.25);
+    &:has(img) {
+      padding: 0.75rem 2rem;
+    }
   }
 }
 
@@ -249,13 +253,20 @@ section:not(:first-child) > .container {
         margin-top: 3rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        justify-items: center;
         gap: 3rem;
 
         & li a {
-          text-align: center;
-          display: block;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
           white-space: nowrap;
-          background: white;
+
+          & img {
+            width: 2rem;
+            height: auto;
+          }
         }
       }
 
@@ -274,6 +285,13 @@ section:not(:first-child) > .container {
 
       & header {
         flex: 1 1 100%;
+
+        & ul {
+          justify-items: normal;
+          & li a {
+            width: auto;
+          }
+        }
       }
     }
   }
