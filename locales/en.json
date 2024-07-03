@@ -1,0 +1,147 @@
+{
+  "navigation": [
+    {
+      "title": "Home",
+      "href": "/"
+    },
+    {
+      "title": "Download App",
+      "href": "#app"
+    },
+    {
+      "title": "Services",
+      "href": "#categories"
+    },
+    {
+      "title": "About Us",
+      "href": "#about"
+    },
+    {
+      "title": "Delivery",
+      "href": "#delivery"
+    },
+    {
+      "title": "Help & FAQ",
+      "href": "#"
+    },
+    {
+      "title": "Contact Us",
+      "href": "#"
+    }
+  ],
+  "landing": {
+    "heading": "Simplify Your Life. Deliveries and Rides in One App",
+    "paragraph": "Download Snapp today and experience a world of convenience. Order food, groceries, and more, or hail a ride with just a few taps.",
+    "cta": ["Get Started Today", "Contact Us"]
+  },
+  "app": {
+    "heading": "Download Our Apps",
+    "apps": [
+      {
+        "title": "Google Play",
+        "icon": "images/app-stores/google-play-store.png",
+        "href": "#"
+      },
+      {
+        "title": "App Store",
+        "icon": "images/app-stores/apple-app-store.png",
+        "href": "#"
+      }
+    ],
+    "cta": {
+      "title": "More Options",
+      "href": "#"
+    }
+  },
+  "categories": {
+    "heading": "Everything You Need, Delivered and on Demand",
+    "cta": [
+      {
+        "icon": "images/categories/cab.png",
+        "title": "Taxi Service"
+      },
+      {
+        "icon": "images/categories/food.png",
+        "title": "Food Delivery"
+      },
+      {
+        "icon": "images/categories/doctor.png",
+        "title": "Pharmacy Delivery"
+      },
+      {
+        "icon": "images/categories/bike.png",
+        "title": "Bike Rentals"
+      },
+      {
+        "icon": "images/categories/hotel.png",
+        "title": "In-Hotel Delivery"
+      },
+      {
+        "icon": "images/categories/market.png",
+        "title": "Grocery Delivery"
+      },
+      {
+        "icon": "images/categories/new-shop.png",
+        "title": "Convenience Stores"
+      },
+      {
+        "icon": "images/categories/club.png",
+        "title": "VIP"
+      }
+    ]
+  },
+  "about": {
+    "heading": "Who We Are and what We Do",
+    "paragraph": "We started Snapp with a simple idea: to make life easier for people in our city. We remembered the struggle of juggling errands, cooking after a long day, and waiting for unreliable taxis. We knew there had to be a better way. So, we built Snapp - a one-stop shop for all your on-demand needs. We connect you with the best restaurants, grocery stores, and reliable drivers, all through a convenient and user-friendly app. Our mission is to empower you to spend less time on errands and more time on what truly matters."
+  },
+  "delivery": {
+    "heading": "Get what You Need, Fast. Delivered Fresh",
+    "paragraph": "Enjoy the convenience and peace of mind that comes with Snapp delivery.",
+    "cta": {
+      "title": "For Additional Information",
+      "href": "#"
+    }
+  },
+  "footer": {
+    "cta": [
+      {
+        "title": "Home",
+        "href": "/"
+      },
+      {
+        "title": "Careers",
+        "href": "#"
+      },
+      {
+        "title": "Help & FAQ",
+        "href": "#"
+      },
+      {
+        "title": "Contact Us",
+        "href": "#"
+      }
+    ],
+    "socials": [
+      {
+        "title": "Twitter",
+        "icon": "images/socials/",
+        "href": "#"
+      },
+      {
+        "title": "LinkedIn",
+        "icon": "images/socials/ph_linkedin-logo-light.png",
+        "href": "#"
+      },
+      {
+        "title": "Instagram",
+        "icon": "images/socials/ph_instagram-logo-light.png",
+        "href": "#"
+      },
+      {
+        "title": "Telegram",
+        "icon": "images/socials/uit_telegram-alt.png",
+        "href": "#"
+      }
+    ]
+  }
+}
