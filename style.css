@@ -154,8 +154,11 @@ section:not(:first-child) > .container {
         & button {
           display: none;
 
-          &[aria-expanded="false"] + ul {
-            display: flex;
+          &[aria-expanded="false"],
+          &[aria-expanded="true"] {
+            & + ul {
+              display: flex;
+            }
           }
         }
 
