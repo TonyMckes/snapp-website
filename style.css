@@ -322,28 +322,29 @@ section:not(:first-child) > .container {
 
 /* Delivery */
 
-.delivery {
-  & .container {
-    padding-block: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 6rem;
-  }
+.delivery .container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+  padding-block: 2rem;
 
-  & header {
-    flex: 1 1 100%;
-  }
-
-  & a {
+  & header a {
     margin-top: 2rem;
     display: block;
     max-width: max-content;
     margin-inline: auto;
   }
 
-  @media only screen and (max-width: 768px) {
-    & .container {
-      flex-direction: column;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+
+    & .image {
+      flex: 1 1 50%;
+    }
+
+    & header {
+      flex: 1 1 50%;
     }
   }
 }
