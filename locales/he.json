@@ -1,0 +1,147 @@
+{
+  "navigation": [
+    {
+      "title": "ראשי",
+      "href": "/"
+    },
+    {
+      "title": "הורד אפליקציה",
+      "href": "#app"
+    },
+    {
+      "title": "שירותים",
+      "href": "#categories"
+    },
+    {
+      "title": "אודות",
+      "href": "#about"
+    },
+    {
+      "title": "מסירה",
+      "href": "#delivery"
+    },
+    {
+      "title": "שאלות נפוצות",
+      "href": "#"
+    },
+    {
+      "title": "צור קשר",
+      "href": "#"
+    }
+  ],
+  "landing": {
+    "heading": "פשט את החיים שלך. משלוחים ונסיעות באפליקציה אחת",
+    "paragraph": "הורד את סנאפ היום ותיהנה מעולם של נוחות. הזמן אוכל, מצרכים ועוד, או תזמין מונית בכמה הקשות.",
+    "cta": ["התחל היום", "צור קשר"]
+  },
+  "app": {
+    "heading": "הורד את האפליקציות שלנו",
+    "apps": [
+      {
+        "title": "Google Play",
+        "icon": "images/app-stores/google-play-store.png",
+        "href": "#"
+      },
+      {
+        "title": "App Store",
+        "icon": "images/app-stores/apple-app-store.png",
+        "href": "#"
+      }
+    ],
+    "cta": {
+      "title": "הצג אפשרויות נוספות",
+      "href": "#"
+    }
+  },
+  "categories": {
+    "heading": "כל מה שאתה צריך, נשלח אליך לפי דרישה",
+    "cta": [
+      {
+        "icon": "images/categories/cab.png",
+        "title": "שירות מוניות"
+      },
+      {
+        "icon": "images/categories/food.png",
+        "title": "משלוחי אוכל"
+      },
+      {
+        "icon": "images/categories/doctor.png",
+        "title": "משלוחי בית מרקחת"
+      },
+      {
+        "icon": "images/categories/bike.png",
+        "title": "השכרת אופניים"
+      },
+      {
+        "icon": "images/categories/hotel.png",
+        "title": "משלוח לבית מלון"
+      },
+      {
+        "icon": "images/categories/market.png",
+        "title": "משלוחי מכולת"
+      },
+      {
+        "icon": "images/categories/new-shop.png",
+        "title": "מינימרקט"
+      },
+      {
+        "icon": "images/categories/club.png",
+        "title": "המועדון שלנו"
+      }
+    ]
+  },
+  "about": {
+    "heading": "מי אנחנו ומה אנחנו עושים?",
+    "paragraph": "התחלנו את Snapp עם רעיון פשוט: לעשות חיים קלים יותר לאנשים בעיר שלנו. נזכרנו במאבק של ג'אגלינג בסידורים, בישולים אחרי יום ארוך והמתנה למוניות לא אמינות. ידענו שחייבת להיות דרך טובה יותר. אז בנינו את Snapp - חנות אחת לכל הצרכים שלך לפי דרישה. אנו מחברים אותך למיטב המסעדות, חנויות המכולת והנהגים האמינים, הכל באמצעות אפליקציה נוחה וידידותית למשתמש. המשימה שלנו היא להעצים אותך להשקיע פחות זמן בסידורים ויותר זמן במה שחשוב באמת."
+  },
+  "delivery": {
+    "heading": "מה שצריך, עכשיו. טרי ומהיר.",
+    "paragraph": "תהנה מהנוחות ומהשקט הנפשי שמגיע עם משלוח Snapp.",
+    "cta": {
+      "title": "למידע נוסף",
+      "href": "#"
+    }
+  },
+  "footer": {
+    "cta": [
+      {
+        "title": "ראשי",
+        "href": "/"
+      },
+      {
+        "title": "קריירה",
+        "href": "#"
+      },
+      {
+        "title": "שאלות נפוצות",
+        "href": "#"
+      },
+      {
+        "title": "צור קשר",
+        "href": "#"
+      }
+    ],
+    "socials": [
+      {
+        "title": "Twitter",
+        "icon": "images/socials/",
+        "href": "#"
+      },
+      {
+        "title": "LinkedIn",
+        "icon": "images/socials/ph_linkedin-logo-light.png",
+        "href": "#"
+      },
+      {
+        "title": "Instagram",
+        "icon": "images/socials/ph_instagram-logo-light.png",
+        "href": "#"
+      },
+      {
+        "title": "Telegram",
+        "icon": "images/socials/uit_telegram-alt.png",
+        "href": "#"
+      }
+    ]
+  }
+}
