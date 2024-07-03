@@ -20,6 +20,7 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     setAppsLang(heLang);
     setCategoriesLang(heLang);
     setAboutLang(heLang);
+    setDeliveryLang(heLang);
   } else {
     document.documentElement.setAttribute("lang", "en");
     document.documentElement.setAttribute("dir", "ltr");
@@ -29,6 +30,7 @@ document.querySelector(".toggle-lang").addEventListener("click", () => {
     setAppsLang(enLang);
     setCategoriesLang(enLang);
     setAboutLang(enLang);
+    setDeliveryLang(enLang);
   }
 });
 
@@ -129,4 +131,17 @@ function setAboutLang(lang) {
 
   heading.textContent = lang.about.heading;
   paragraph.textContent = lang.about.paragraph;
+}
+
+function setDeliveryLang(lang) {
+  const deliveryHeader = document.querySelector(".delivery header");
+
+  const heading = deliveryHeader.querySelector("h2");
+  const paragraph = deliveryHeader.querySelector("p");
+  const anchor = deliveryHeader.querySelector("a");
+
+  heading.textContent = lang.delivery.heading;
+  paragraph.textContent = lang.delivery.paragraph;
+  anchor.setAttribute("href", lang.delivery.cta.href);
+  anchor.textContent = lang.delivery.cta.title;
 }
