@@ -1,4 +1,6 @@
 {
+  "locale": { "lang": "he", "dir": "rtl" },
+  "selector": "בחר שפה:",
   "navigation": [
     {
       "title": "הורד אפליקציה",

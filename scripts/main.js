@@ -1,40 +1,43 @@
-const heLang = await fetch("../locales/he.json").then((res) => res.json());
-const enLang = await fetch("../locales/en.json").then((res) => res.json());
-
 const toggle = document.querySelector(".toggler");
 toggle.addEventListener("click", () => {
   toggle.ariaExpanded = toggle.ariaExpanded !== "true";
 });
 
-// TODO: Detect client's language
-document.querySelector(".toggle-lang").addEventListener("click", () => {
-  const lang = document.documentElement.getAttribute("lang");
-  const dir = document.documentElement.getAttribute("dir");
-
-  if (lang === "en" && dir === "ltr") {
-    document.documentElement.setAttribute("lang", "he");
-    document.documentElement.setAttribute("dir", "rtl");
-
-    setNavLang(heLang);
-    setLandingLang(heLang);
-    setAppsLang(heLang);
-    setCategoriesLang(heLang);
-    setAboutLang(heLang);
-    setDeliveryLang(heLang);
-    setFooterLang(heLang);
-  } else {
-    document.documentElement.setAttribute("lang", "en");
-    document.documentElement.setAttribute("dir", "ltr");
-
-    setNavLang(enLang);
-    setLandingLang(enLang);
-    setAppsLang(enLang);
-    setCategoriesLang(enLang);
-    setAboutLang(enLang);
-    setDeliveryLang(enLang);
-    setFooterLang(enLang);
+document.addEventListener("DOMContentLoaded", () => {
+  if (navigator.languages.length) {
+    const browserLang = navigator.languages[0].slice(0, 2);
+    setSiteLanguage(browserLang);
   }
 });
+
+const langSelectors = document.querySelectorAll(".lang-selector");
+langSelectors.forEach((selector) => {
+  selector.addEventListener("change", (event) => {
+    setSiteLanguage(event.target.value);
+  });
+});
+
+function setSiteLanguage(language = "en") {
+  fetch(`../locales/${language}.json`)
+    .then((res) => res.json())
+    .then((langJSON) => {
+      document.documentElement.setAttribute("lang", langJSON.locale.lang);
+      document.documentElement.setAttribute("dir", langJSON.locale.dir);
+
+      langSelectors.forEach((selector) => {
+        selector.querySelector("label").textContent = langJSON.selector;
+      });
+
+      setNavLang(langJSON);
+      setLandingLang(langJSON);
+      setAppsLang(langJSON);
+      setCategoriesLang(langJSON);
+      setAboutLang(langJSON);
+      setDeliveryLang(langJSON);
+      setFooterLang(langJSON);
+    })
+    .catch(console.error);
+}
 
 function setNavLang(lang) {
   const navigationItems = lang.navigation.map((element) => {

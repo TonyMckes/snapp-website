@@ -1,4 +1,6 @@
 {
+  "locale": { "lang": "en", "dir": "ltr" },
+  "selector": "Choose a language:",
   "navigation": [
     {
       "title": "Download App",
