@@ -5,7 +5,8 @@ toggle.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   if (navigator.languages.length) {
-    const browserLang = navigator.languages[0].slice(0, 2);
+    const browserLang =
+      sessionStorage.getItem("lang") || navigator.languages[0].slice(0, 2);
     setSiteLanguage(browserLang);
   }
 });
@@ -40,6 +41,8 @@ function setSiteLanguage(language = "en") {
       setAboutLang(langJSON);
       setDeliveryLang(langJSON);
       setFooterLang(langJSON);
+
+      sessionStorage.setItem("lang", language);
     })
     .catch(console.error);
 }
