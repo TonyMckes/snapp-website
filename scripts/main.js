@@ -24,8 +24,13 @@ function setSiteLanguage(language = "en") {
       document.documentElement.setAttribute("lang", langJSON.locale.lang);
       document.documentElement.setAttribute("dir", langJSON.locale.dir);
 
-      langSelectors.forEach((selector) => {
-        selector.querySelector("label").textContent = langJSON.selector;
+      langSelectors.forEach((selectorElement) => {
+        selectorElement.querySelector("label").textContent = langJSON.selector;
+        selectorElement.querySelectorAll("option").forEach((option) => {
+          option.value === langJSON.locale.lang
+            ? option.setAttribute("selected", "selected")
+            : option.removeAttribute("selected");
+        });
       });
 
       setNavLang(langJSON);
