@@ -81,7 +81,7 @@ function setAppsLang(lang) {
 
   const heading = appsHeader.querySelector("h2");
   const list = appsHeader.querySelector("ul");
-  const anchor = appsHeader.querySelector("a");
+  const anchor = appsHeader.querySelector(":scope > a");
 
   heading.textContent = lang.landing.heading;
   anchor.textContent = lang.app.cta.title;
