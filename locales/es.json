@@ -1,0 +1,141 @@
+{
+  "locale": { "lang": "es", "dir": "ltr" },
+  "selector": "Elige un idioma:",
+  "navigation": [
+    {
+      "title": "Descargar la app",
+      "href": "#app"
+    },
+    {
+      "title": "Servicios",
+      "href": "#categories"
+    },
+    {
+      "title": "Nosotros",
+      "href": "#about"
+    },
+    {
+      "title": "Entrega",
+      "href": "#delivery"
+    },
+    {
+      "title": "FAQ",
+      "href": "#"
+    },
+    {
+      "title": "Contáctanos",
+      "href": "#"
+    }
+  ],
+  "landing": {
+    "heading": "Simplifica tu vida. Entregas y viajes en una sola aplicación",
+    "paragraph": "Descarga Snapp hoy y experimenta un mundo de conveniencia. Pide comida, abarrotes y más, o solicita un viaje con solo unos toques.",
+    "cta": ["Comienza hoy", "Contáctanos"]
+  },
+  "app": {
+    "heading": "Descarga nuestras aplicaciones",
+    "apps": [
+      {
+        "title": "Google Play",
+        "icon": "images/app-stores/google-play-store.png",
+        "href": "#"
+      },
+      {
+        "title": "App Store",
+        "icon": "images/app-stores/apple-app-store.png",
+        "href": "#"
+      }
+    ],
+    "cta": {
+      "title": "Más opciones",
+      "href": "#"
+    }
+  },
+  "categories": {
+    "heading": "Todo lo que necesitas, entregado y a pedido",
+    "cta": [
+      {
+        "icon": "images/categories/cab.png",
+        "title": "Servicio de taxi"
+      },
+      {
+        "icon": "images/categories/food.png",
+        "title": "Entrega de comida"
+      },
+      {
+        "icon": "images/categories/doctor.png",
+        "title": "Entrega de farmacia"
+      },
+      {
+        "icon": "images/categories/bike.png",
+        "title": "Alquiler de bicicletas"
+      },
+      {
+        "icon": "images/categories/hotel.png",
+        "title": "Entrega en el hotel"
+      },
+      {
+        "icon": "images/categories/market.png",
+        "title": "Entrega de abarrotes"
+      },
+      {
+        "icon": "images/categories/new-shop.png",
+        "title": "Tiendas de conveniencia"
+      },
+      {
+        "icon": "images/categories/club.png",
+        "title": "VIP"
+      }
+    ]
+  },
+  "about": {
+    "heading": "Quiénes somos y qué hacemos",
+    "paragraph": "Comenzamos Snapp con una idea sencilla: hacer la vida más fácil para las personas en nuestra ciudad. Recordamos la lucha para hacer malabares con los recados, cocinar después de un largo día y esperar taxis poco confiables. Sabíamos que debía haber una mejor manera. Así que creamos Snapp, una tienda única para todas tus necesidades a pedido. Te conectamos con los mejores restaurantes, tiendas de abarrotes y conductores confiables, todo a través de una aplicación conveniente y fácil de usar. Nuestra misión es empoderarte para que pases menos tiempo en recados y más tiempo en lo que realmente importa."
+  },
+  "delivery": {
+    "heading": "Obtén lo que necesitas, rápido. Entregado fresco",
+    "paragraph": "Disfruta de la comodidad y la tranquilidad que ofrece la entrega de Snapp.",
+    "cta": {
+      "title": "Para obtener información adicional",
+      "href": "#"
+    }
+  },
+  "footer": {
+    "cta": [
+      {
+        "title": "Empleos",
+        "href": "#"
+      },
+      {
+        "title": "FAQ",
+        "href": "#"
+      },
+      {
+        "title": "Contáctenos",
+        "href": "#"
+      }
+    ],
+    "socials": [
+      {
+        "title": "Twitter",
+        "icon": "images/socials/ph_twitter-logo-light.png",
+        "href": "#"
+      },
+      {
+        "title": "LinkedIn",
+        "icon": "images/socials/ph_linkedin-logo-light.png",
+        "href": "#"
+      },
+      {
+        "title": "Instagram",
+        "icon": "images/socials/ph_instagram-logo-light.png",
+        "href": "#"
+      },
+      {
+        "title": "Telegram",
+        "icon": "images/socials/uit_telegram-alt.png",
+        "href": "#"
+      }
+    ]
+  }
+}
